@@ -38,6 +38,11 @@ public class ServerCommandArgs extends CommandArgs {
             description = "The cluster daemon mode")
     private boolean daemonMode = false;
 
+    @Parameter(
+            names = {"-clusterId", "--kubernetes.cluster-id"},
+            description = "The cluster daemon mode")
+    private String clusterId;
+
     @Override
     public Command<?> buildCommand() {
         return new ServerExecuteCommand(this);
